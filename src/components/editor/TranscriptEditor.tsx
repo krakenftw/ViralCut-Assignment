@@ -47,7 +47,7 @@ function TranscriptEditor({
         } else {
           setIsPlaying(false);
           setIsActive(null);
-          clearInterval(intervalRef.current as NodeJS.Timeout);
+          clearInterval(intervalRef.current as ReturnType<typeof setInterval>);
           intervalRef.current = null;
           setCurrentTime(0);
         }

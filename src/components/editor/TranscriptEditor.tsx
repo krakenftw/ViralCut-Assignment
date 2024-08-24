@@ -18,7 +18,7 @@ function TranscriptEditor({
   const [isPlaying, setIsPlaying] = useState(false);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [editedWord, setEditedWord] = useState<string | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (isActive == null || isActive === -1) return;
